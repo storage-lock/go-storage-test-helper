@@ -1,4 +1,4 @@
-package storage
+package storage_test_helper
 
 import (
 	"context"
