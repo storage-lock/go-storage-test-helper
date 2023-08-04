@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"github.com/storage-lock/go-storage"
-	"github.com/storage-lock/go-storage-lock/pkg/storage_lock"
+	storage_lock "github.com/storage-lock/go-storage-lock"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"
