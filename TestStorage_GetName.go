@@ -14,5 +14,5 @@ func TestStorage_GetName(t *testing.T, storage storage.Storage) {
 	assert.NotEmptyf(t, storage.GetName(), "storage name is empty")
 
 	// 名称两侧不能有空格
-	assert.Truef(t, storage.GetName() != strings.TrimSpace(storage.GetName()), "Storage name \"%s\" contains whitespace character, it is not allow", storage.GetName())
+	assert.Truef(t, storage.GetName() == strings.TrimSpace(storage.GetName()), "Storage name \"%s\" contains whitespace character, it is not allow", storage.GetName())
 }
