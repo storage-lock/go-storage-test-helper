@@ -13,7 +13,7 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/storage-lock/go-events v0.0.0-20230804160245-1ee3734433ff // indirect
-	github.com/storage-lock/go-storage v0.0.0-20230804160614-b1e0d2815105 // indirect
+	github.com/storage-lock/go-storage v0.0.0-20230805070648-ce1105955864 // indirect
 	github.com/storage-lock/go-storage-lock v0.0.0-20230804162813-6ce3ddc2805b // indirect
 	github.com/storage-lock/go-utils v0.0.0-20230804131655-6dbe431cdc1a // indirect
 	github.com/stretchr/testify v1.8.4 // indirect

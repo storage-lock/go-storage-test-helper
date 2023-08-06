@@ -2,7 +2,7 @@
 
 # 一、这是什么
 
-用于辅助测试Storage的实现是否OK的测试工具，辅助提高开发效率。
+用于辅助测试[Storage](https://github.com/storage-lock/go-storage)的实现是否OK的测试工具，辅助提高开发效率。
 
 # 二、安装依赖
 
