@@ -18,7 +18,7 @@ func TestStorage_Get(t *testing.T, s storage.Storage) {
 	TestEnsureLockNotExists(t, s, TestLockId)
 
 	lockInformation := BuildTestLockInformation(t)
-	err = s.InsertWithVersion(ctx, TestLockId, TestLockVersion, lockInformation)
+	err = s.CreateWithVersion(ctx, TestLockId, TestLockVersion, lockInformation)
 	assert.Nilf(t, err, "storage %s insert error: %#v", s.GetName(), err)
 
 	lockInformationJsonStringRs, err := s.Get(ctx, TestLockId)

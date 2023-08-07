@@ -20,7 +20,7 @@ func TestStorage_DeleteWithVersion(t *testing.T, s storage.Storage) {
 
 	// 先插入一条
 	lockInformation := BuildTestLockInformation(t)
-	err = s.InsertWithVersion(ctx, TestLockId, TestLockVersion, lockInformation)
+	err = s.CreateWithVersion(ctx, TestLockId, TestLockVersion, lockInformation)
 	assert.Nil(t, err)
 
 	// 确认能够查询得到

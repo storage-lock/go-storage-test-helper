@@ -18,7 +18,7 @@ func TestStorage_UpdateWithVersion(t *testing.T, s storage.Storage) {
 
 	TestEnsureLockNotExists(t, s, TestLockId)
 
-	err = s.InsertWithVersion(ctx, TestLockId, TestLockVersion, BuildTestLockInformation(t))
+	err = s.CreateWithVersion(ctx, TestLockId, TestLockVersion, BuildTestLockInformation(t))
 	assert.Nilf(t, err, "s %s insert error: %#v", s.GetName(), err)
 
 	newVersion := storage.Version(TestLockVersion + 1)

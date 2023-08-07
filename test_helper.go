@@ -26,7 +26,7 @@ func TestStorage(t *testing.T, storage storage.Storage) {
 
 	TestStorage_UpdateWithVersion(t, storage)
 
-	TestStorage_InsertWithVersion(t, storage)
+	TestStorage_CreateWithVersion(t, storage)
 
 	TestStorage_DeleteWithVersion(t, storage)
 

@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestStorage_InsertWithVersion(t *testing.T, s storage.Storage) {
+func TestStorage_CreateWithVersion(t *testing.T, s storage.Storage) {
 	assert.NotNilf(t, s, "storage is nil")
 
 	ctx, cancelFunc := context.WithTimeout(context.Background(), DefaultContextTimeout)
@@ -17,6 +17,6 @@ func TestStorage_InsertWithVersion(t *testing.T, s storage.Storage) {
 
 	TestEnsureLockNotExists(t, s, TestLockId)
 
-	err = s.InsertWithVersion(ctx, TestLockId, TestLockVersion, BuildTestLockInformation(t))
+	err = s.CreateWithVersion(ctx, TestLockId, TestLockVersion, BuildTestLockInformation(t))
 	assert.Nilf(t, err, "storage %s insert error: %#v", s.GetName(), err)
 }
