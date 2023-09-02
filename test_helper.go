@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"github.com/storage-lock/go-storage"
 	storage_lock "github.com/storage-lock/go-storage-lock"
 	"github.com/stretchr/testify/assert"
@@ -30,7 +31,11 @@ func TestStorage(t *testing.T, storage storage.Storage) {
 
 	TestStorage_DeleteWithVersion(t, storage)
 
+	TestStorage_List(t, storage)
+
 	TestStorage_Close(t, storage)
+
+	t.Log(fmt.Sprintf("Storage %s test all func done.", storage.GetName()))
 }
 
 // ------------------------------------------------- --------------------------------------------------------------------

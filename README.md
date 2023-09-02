@@ -14,6 +14,8 @@ go get -u github.com/storage-lock/go-storage-test-helper
 
 ## 3.1 实现Storage
 
+根据存储介质的特性自行实现[Storage](https://github.com/storage-lock/go-storage)，这里就随便找一个空实现的例子，这个例子是肯定跑不过测试的，只是为了演示流程使用： 
+
 ```go
 package examples
 
@@ -89,6 +91,7 @@ import (
 )
 
 func TestFooStorage(t *testing.T) {
+	// 在要测试的Storage实现的仓库中创建好Storage，然后传递给方法测试
 	storage_test_helper.TestStorage(t, &FooStorage{})
 }
 ```

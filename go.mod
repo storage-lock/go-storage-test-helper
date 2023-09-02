@@ -3,6 +3,7 @@ module github.com/storage-lock/go-storage-test-helper
 go 1.19
 
 require (
+	github.com/golang-infrastructure/go-if-expression v0.0.3
 	github.com/golang-infrastructure/go-iterator v0.0.0-20230524171120-56988a9b127c
 	github.com/storage-lock/go-storage v0.0.2
 	github.com/storage-lock/go-storage-lock v0.0.3
