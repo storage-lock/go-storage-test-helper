@@ -16,6 +16,13 @@ func (x *FooStorage) GetName() string {
 	return ""
 }
 
+func (x *FooStorage) Capabilities() []storage.StorageCapability {
+	return []storage.StorageCapability{
+		storage.CapabilityCAS,
+		storage.CapabilityReliableTime,
+	}
+}
+
 func (x *FooStorage) Init(ctx context.Context) error {
 	return nil
 }

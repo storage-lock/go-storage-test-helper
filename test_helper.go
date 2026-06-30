@@ -19,6 +19,8 @@ func TestStorage(t *testing.T, storage storage.Storage) {
 
 	TestStorage_GetName(t, storage)
 
+	TestStorage_Capabilities(t, storage)
+
 	TestStorage_Init(t, storage)
 
 	TestStorage_Get(t, storage)
