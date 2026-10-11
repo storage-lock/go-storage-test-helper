@@ -3,7 +3,6 @@ package storage_test_helper
 import (
 	"context"
 	"fmt"
-	if_expression "github.com/golang-infrastructure/go-if-expression"
 	"github.com/storage-lock/go-storage"
 	storage_lock "github.com/storage-lock/go-storage-lock"
 	"github.com/stretchr/testify/assert"
@@ -17,11 +16,7 @@ func TestStorage_DeleteWithVersion(t *testing.T, s storage.Storage) {
 	ctx, cancelFunc := context.WithTimeout(context.Background(), DefaultContextTimeout)
 	defer cancelFunc()
 	err := s.Init(ctx)
-	assert.Nilf(t, err, "Storage %s init error: %s", s.GetName(), if_expression.ReturnByFunc(err != nil, func() string {
-		return err.Error()
-	}, func() string {
-		return ""
-	}))
+	assert.Nilf(t, err, "Storage %s init error: %s", s.GetName(), errText(err))
 
 	TestEnsureLockNotExists(t, s)
 

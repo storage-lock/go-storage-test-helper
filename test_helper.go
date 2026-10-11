@@ -79,3 +79,10 @@ func BuildTestLockInformation(t *testing.T, version ...storage.Version) *storage
 }
 
 // ------------------------------------------------- --------------------------------------------------------------------
+
+func errText(err error) string {
+	if err == nil {
+		return ""
+	}
+	return err.Error()
+}
